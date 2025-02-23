@@ -96,13 +96,11 @@ returns top n number of usernames and their corresponding score.
 
 ### User Scores Table
 
-| userId | username | score |
-| ------ | -------- | ----- |
-| 12345  | Pikachu  | 20000 |
-| 456876 | Dragon   | 18000 |
-
-...
-| 99999 | player123 | 1800 |
+| userId | username  | score |
+| ------ | --------- | ----- |
+| 12345  | Pikachu   | 20000 |
+| 456876 | Dragon    | 18000 |
+| 99999  | player123 | 1800  |
 
 ## Data Storage
 
@@ -110,10 +108,10 @@ returns top n number of usernames and their corresponding score.
 
 #### **User Table**
 
-| userId (PK) | username | email        | password_hash | createdAt        |
-| ----------- | -------- | ------------ | ------------- | ---------------- |
-| 1           | player1  | p1@email.com | ****\*\*****  | 2024-01-01 10:00 |
-| 2           | player2  | p2@email.com | ****\*\*****  | 2024-01-01 11:00 |
+| userId (PK) | username | email        | password_hash    | createdAt        |
+| ----------- | -------- | ------------ | ---------------- | ---------------- |
+| 1           | player1  | p1@email.com | \***\*\*\*\*\*** | 2024-01-01 10:00 |
+| 2           | player2  | p2@email.com | \***\*\*\*\*\*** | 2024-01-01 11:00 |
 
 #### **Scores Table**
 
@@ -140,6 +138,7 @@ ZRANGE leaderboard 0 9 WITHSCORES
 ```
 
 ✅ **Advantage**: Fast lookups (O(log N))
+
 ❌ **Disadvantage**: Data loss risk if not persisted
 
 ## Suggested Improvements
